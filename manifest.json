@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Video Scraper",
+    "version": "1.0",
+    "description": "Scrapes and downloads all video files from a webpage.",
+    "permissions": [
+      "activeTab",
+      "downloads"
+    ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  
